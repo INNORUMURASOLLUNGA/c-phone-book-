@@ -1,0 +1,72 @@
+
+lii=[1,2,3,4,5,6,7,8,9,10,11,12,13]
+jii=[1,2,3,4,5,6,7,8,9,10,11,12,13]
+kii=[1,2,3,4,5,6,7,8,9,10,11,12,13]
+   
+   
+print("start selecting your items!!!")
+cc=0
+li=0
+ii=0
+iii=0
+icic=0
+for i in range(1,100):
+    ii=ii+1
+    b=str(input("enter the item:"))
+    lii[i]=b
+    c=int(input("enter the quantity:"))
+    jii[i]=c
+   
+   
+    if b=="rice":
+       cc=c*54
+       kii[i]=cc
+   
+    elif b=="pulses":
+       cc=c*171.5
+       kii[i]=cc
+    elif b=="sugar":
+       cc=c*142
+       kii[i]=cc
+    elif b=="millets":
+       cc=c*90.25
+       kii[i]=cc
+    elif b=="spices":
+       cc=c*953
+       kii[i]=cc
+    elif b=="salt":
+       cc=c*25
+       kii[i]=cc
+    elif b=="basmathi rice":
+       cc=c*250
+       kii[i]=cc
+    elif b=="groundnut oil":
+       cc=c*197
+       kii[i]=cc
+    elif b=="sunflower oil":
+       cc=c*140
+       kii[i]=cc
+    elif b=="ghee":
+       cc=c*350.75
+       kii[i]=cc
+    elif b=="organic sugar":
+       cc=c*275
+       kii[i]=cc
+   
+    d=str(input("continue yes/no:"))
+    if d!="yes":
+       break
+
+print('''********bill*****
+bill no:1
+bill date:05/11/2019
+items\t\tquantity\trate''')
+for j in range(1,ii+1):
+ print("%s\t\t%d\t\t%d"%(lii[j],jii[j],kii[j]))
+ iii=iii+kii[j]
+print("---------------------------------------\n")
+print("total \t\t\t\t",iii)
+icic=iii*0.02
+print("GST(2%)\t\t\t\t",icic)
+print("----------------------------------------")
+print("total payable balance\t\t",iii+(iii*0.02))
